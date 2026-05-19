@@ -153,7 +153,7 @@ export function App() {
           </section>
 
           <section
-            className="grid gap-px bg-border/80 lg:grid-cols-[1.1fr_0.9fr]"
+            className="grid gap-px bg-border/80 lg:grid-cols-2"
             id="about"
           >
             <div className="bg-background px-5 py-12 sm:px-8">
@@ -161,8 +161,7 @@ export function App() {
                 About
               </p>
               <h2 className="mt-4 text-2xl tracking-[-0.05em] sm:text-3xl">
-                Placeholder studio introduction for the people behind the
-                modules.
+                Placeholder studio introduction.
               </h2>
               <p className="mt-5 max-w-2xl text-sm leading-7 text-muted-foreground">
                 Use this block for the short version of the story, design
