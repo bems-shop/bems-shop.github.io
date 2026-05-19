@@ -1,7 +1,7 @@
 import { AtSign, Globe2, type LucideIcon } from "lucide-react"
 
 export const siteLinks = [
-  { href: "#products", label: "Products" },
+  { href: "#top", label: "Products" },
   { href: "#about", label: "About Us" },
   { href: "#contact", label: "Contact" },
 ] as const

@@ -124,15 +124,9 @@ export function App() {
         </header>
 
         <main className="mx-auto flex w-full max-w-7xl flex-1 flex-col px-4 py-4 sm:px-6 sm:py-6">
-          <section className="border-b border-border/80 px-5 pb-16 pt-14 sm:px-8 sm:pb-20 sm:pt-18">
-            <div className="mx-auto flex max-w-4xl flex-col items-center gap-6 text-center">
-              <h1 className="max-w-4xl text-3xl tracking-[-0.08em] sm:text-5xl lg:text-6xl">
-                Eurorack modules, front and centre.
-              </h1>
-            </div>
-
+          <section className="border-b border-border/80 px-5 pb-16 pt-6 sm:px-8 sm:pb-20 sm:pt-8">
             <div
-              className="mt-28 scroll-mt-28 grid gap-x-16 gap-y-20 lg:grid-cols-2 xl:gap-x-18"
+              className="scroll-mt-28 grid gap-x-16 gap-y-20 lg:grid-cols-2 xl:gap-x-18"
               id="products"
             >
               {catalogueProducts.map((product) => (
