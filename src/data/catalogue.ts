@@ -1,18 +1,14 @@
-import { AtSign, Globe2, type LucideIcon } from "lucide-react"
-
 export const siteLinks = [
   { href: "#top", label: "Products" },
   { href: "#about", label: "About / Contact" },
 ] as const
 
-export const socialLinks: Array<{
-  href: string
-  label: string
-  icon: LucideIcon
-}> = [
-  { href: "#", label: "Website", icon: Globe2 },
-  { href: "#", label: "Social", icon: AtSign },
-]
+export const socialLinks = [
+  {
+    href: "https://www.instagram.com/bristolelectronicmusicsystems/",
+    label: "Instagram",
+  },
+] as const
 
 export const catalogueProducts = [
   {
