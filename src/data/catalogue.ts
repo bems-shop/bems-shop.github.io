@@ -2,8 +2,7 @@ import { AtSign, Globe2, type LucideIcon } from "lucide-react"
 
 export const siteLinks = [
   { href: "#top", label: "Products" },
-  { href: "#about", label: "About Us" },
-  { href: "#contact", label: "Contact" },
+  { href: "#about", label: "About / Contact" },
 ] as const
 
 export const socialLinks: Array<{
