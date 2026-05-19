@@ -152,55 +152,53 @@ export function App() {
             </div>
           </section>
 
-          <section
-            className="grid gap-px bg-border/80 lg:grid-cols-2"
-            id="about"
-          >
-            <div className="bg-background px-5 py-12 sm:px-8">
-              <p className="text-xs uppercase tracking-[0.32em] text-muted-foreground">
-                About
-              </p>
-              <h2 className="mt-4 text-2xl tracking-[-0.05em] sm:text-3xl">
-                Placeholder studio introduction.
-              </h2>
-              <p className="mt-5 max-w-2xl text-sm leading-7 text-muted-foreground">
-                Use this block for the short version of the story, design
-                philosophy, manufacturing notes, or the point of difference.
-                It is intentionally plain so product content remains dominant.
-              </p>
-            </div>
-
-            <div className="bg-background px-5 py-12 sm:px-8" id="contact">
-              <p className="text-xs uppercase tracking-[0.32em] text-muted-foreground">
-                Contact
-              </p>
-              <div className="mt-4 flex flex-col gap-4 text-sm text-muted-foreground">
-                <a
-                  className="inline-flex items-center gap-3 text-foreground transition-colors hover:text-muted-foreground"
-                  href="mailto:hello@example.com"
-                >
-                  <Mail className="size-4" />
-                  hello@example.com
-                </a>
-                <p>
-                  Placeholder for direct contact details, support channel, lead
-                  times, or dealer enquiries.
+          <section className="px-5 py-12 sm:px-8">
+            <div
+              className="grid gap-x-16 gap-y-12 lg:grid-cols-2 xl:gap-x-18"
+              id="about"
+            >
+              <div className="px-6 sm:px-8">
+                <p className="text-xs uppercase tracking-[0.32em] text-muted-foreground">
+                  About
                 </p>
-                <a
-                  className="inline-flex items-center gap-2 uppercase tracking-[0.22em] text-foreground/80 transition-colors hover:text-foreground"
-                  href="#products"
-                >
-                  Review products
-                  <ArrowUpRight className="size-4" />
-                </a>
+                <h2 className="mt-4 text-2xl tracking-[-0.05em] sm:text-3xl">
+                  Placeholder introduction.
+                </h2>
+                <p className="mt-5 max-w-2xl text-sm leading-7 text-muted-foreground">
+                  Use this block for the short version of the story, design
+                  philosophy, manufacturing notes, or the point of difference.
+                  It is intentionally plain so product content remains dominant.
+                </p>
+              </div>
+
+              <div className="px-6 sm:px-8" id="contact">
+                <p className="text-xs uppercase tracking-[0.32em] text-muted-foreground">
+                  Contact
+                </p>
+                <div className="mt-4 flex flex-col gap-4 text-sm text-muted-foreground">
+                  <a
+                    className="inline-flex items-center gap-3 text-foreground transition-colors hover:text-muted-foreground"
+                    href="mailto:hello@example.com"
+                  >
+                    <Mail className="size-4" />
+                    hello@example.com
+                  </a>
+                  <p>
+                    Placeholder for direct contact details, support channel,
+                    lead times, or dealer enquiries.
+                  </p>
+                  <a
+                    className="inline-flex items-center gap-2 uppercase tracking-[0.22em] text-foreground/80 transition-colors hover:text-foreground"
+                    href="#products"
+                  >
+                    Review products
+                    <ArrowUpRight className="size-4" />
+                  </a>
+                </div>
               </div>
             </div>
           </section>
 
-          <footer className="flex flex-col gap-4 border-t border-border/80 px-5 py-5 text-xs uppercase tracking-[0.2em] text-muted-foreground sm:flex-row sm:items-center sm:justify-between sm:px-8">
-            <p>Placeholder catalogue site for GitHub Pages.</p>
-            <p>Edit product data in `src/data/catalogue.ts`.</p>
-          </footer>
         </main>
       </div>
     </div>
