@@ -1,7 +1,9 @@
 import {
   ArrowUpRight,
   Mail,
+  X,
 } from "lucide-react"
+import { useEffect, useState } from "react"
 import { siBigcartel } from "simple-icons"
 
 import bemsLogo from "@/assets/bems-logo.svg"
@@ -15,6 +17,28 @@ function ProductCard({
   availability,
   image,
 }: (typeof catalogueProducts)[number]) {
+  const [isImageOpen, setIsImageOpen] = useState(false)
+
+  useEffect(() => {
+    if (!isImageOpen) {
+      return
+    }
+
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        setIsImageOpen(false)
+      }
+    }
+
+    document.body.style.overflow = "hidden"
+    window.addEventListener("keydown", handleKeyDown)
+
+    return () => {
+      document.body.style.overflow = ""
+      window.removeEventListener("keydown", handleKeyDown)
+    }
+  }, [isImageOpen])
+
   return (
     <article className="flex h-full flex-col gap-10 px-6 py-2 sm:px-8">
       <div className="flex flex-col gap-4">
@@ -39,14 +63,23 @@ function ProductCard({
       </div>
 
       <figure className="flex flex-col gap-3">
-        <div className="relative overflow-hidden rounded-sm bg-card/10">
+        <button
+          aria-label={`View ${name} image larger`}
+          className="group relative overflow-hidden rounded-sm bg-card/10 text-left outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+          onClick={() => setIsImageOpen(true)}
+          type="button"
+        >
           <img
             alt={image.alt}
-            className="aspect-[1/1] w-full object-cover object-center"
+            className="aspect-[1/1] w-full cursor-zoom-in object-cover object-center transition-transform duration-300 ease-out group-hover:scale-[1.025] motion-reduce:transition-none"
             loading="lazy"
             src={image.src}
           />
-        </div>
+          <span
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 bg-foreground/0 transition-colors duration-300 group-hover:bg-foreground/[0.04] motion-reduce:transition-none"
+          />
+        </button>
       </figure>
 
       <div className="mt-auto flex flex-col gap-4">
@@ -75,6 +108,38 @@ function ProductCard({
           ))}
         </div>
       </div>
+
+      {isImageOpen ? (
+        <div
+          aria-modal="true"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-background/92 p-4 backdrop-blur-md sm:p-8"
+          role="dialog"
+        >
+          <button
+            aria-label="Close image viewer"
+            className="absolute right-4 top-4 z-20 inline-flex size-10 items-center justify-center rounded-full border border-border bg-background/80 text-foreground transition-colors hover:bg-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring sm:right-6 sm:top-6"
+            onClick={() => setIsImageOpen(false)}
+            type="button"
+          >
+            <X className="size-5" />
+          </button>
+
+          <button
+            aria-label="Close image viewer backdrop"
+            className="absolute inset-0 cursor-zoom-out"
+            onClick={() => setIsImageOpen(false)}
+            type="button"
+          />
+
+          <div className="pointer-events-none relative z-10 flex max-h-[88svh] max-w-6xl items-center justify-center">
+            <img
+              alt={image.alt}
+              className="max-h-[88svh] w-auto max-w-full object-contain"
+              src={image.src}
+            />
+          </div>
+        </div>
+      ) : null}
     </article>
   )
 }
