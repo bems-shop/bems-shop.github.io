@@ -18,8 +18,7 @@ export const catalogueProducts = [
     summary:
       "Short placeholder description for the first module.",
     availability: [
-      { label: "eBay", href: "#" },
-      { label: "Shopify", href: "#" },
+      { label: "Big Cartel", href: "#" },
     ],
     image: {
       src: "/images/tresh.png",

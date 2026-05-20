@@ -1,9 +1,8 @@
 import {
   ArrowUpRight,
   Mail,
-  ShoppingBag,
-  Store,
 } from "lucide-react"
+import { siBigcartel } from "simple-icons"
 
 import bemsLogo from "@/assets/bems-logo.svg"
 import { catalogueProducts, siteLinks, socialLinks } from "@/data/catalogue"
@@ -61,11 +60,16 @@ function ProductCard({
               className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary/40 px-4 py-2 text-xs uppercase tracking-[0.18em] text-foreground transition-colors hover:bg-secondary/70"
               href={href}
             >
-              {label === "Shopify" ? (
-                <ShoppingBag className="size-4" />
-              ) : (
-                <Store className="size-4" />
-              )}
+              <svg
+                aria-hidden="true"
+                className="size-4"
+                fill="currentColor"
+                role="img"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d={siBigcartel.path} />
+              </svg>
               {label}
             </a>
           ))}
