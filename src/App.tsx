@@ -96,7 +96,7 @@ export function App() {
       <div className="noise-overlay pointer-events-none fixed inset-0 opacity-40" />
 
       <div className="relative min-h-svh">
-        <header className="sticky top-0 z-40 border-b border-border/80 bg-background/88 px-5 py-5 backdrop-blur-md sm:px-8">
+        <header className="sticky top-0 z-40 border-b border-border/70 bg-background/95 px-5 pb-6 pt-5 backdrop-blur-md sm:px-8">
           <div className="flex w-full flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
             <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between lg:gap-10">
               <a
@@ -110,7 +110,7 @@ export function App() {
                 />
               </a>
 
-              <nav aria-label="Primary" className="flex flex-wrap gap-5 text-sm">
+              <nav aria-label="Primary" className="flex flex-wrap gap-8 text-sm sm:gap-10">
                 {siteLinks.map(({ href, label }) => (
                   <a
                     key={label}
