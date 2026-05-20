@@ -22,23 +22,8 @@ export const catalogueProducts = [
       { label: "Shopify", href: "#" },
     ],
     image: {
-      src: "/images/tresh-temp.jpg",
-      alt: "Close-up view of a Eurorack modular synthesizer patch.",
-    },
-  },
-  {
-    name: "TreENV",
-    subtitle: "contour generator",
-    price: "GBP 149.99",
-    summary:
-      "Short placeholder description for the second module.",
-    availability: [
-      { label: "eBay", href: "#" },
-      { label: "Shopify", href: "#" },
-    ],
-    image: {
-      src: "/images/treenv-temp.jpg",
-      alt: "Eurorack modular synthesizer system with illuminated modules.",
+      src: "/images/tresh.png",
+      alt: "B.E.M.S TreSH Eurorack module mounted against weathered wood.",
     },
   },
 ] as const
