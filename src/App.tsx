@@ -1,4 +1,4 @@
-import { ArrowUpRight, Mail, X } from "lucide-react";
+import { ArrowUpRight, ExternalLink, Mail, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { siBigcartel } from "simple-icons";
 
@@ -156,7 +156,7 @@ function ProductCard({
           {availability.map(({ label, href }) => (
             <a
               key={label}
-              className="inline-flex items-center gap-2.5 border-2 border-foreground/70 px-4 py-2 text-sm uppercase tracking-[0.18em] text-foreground/80 transition-colors hover:border-foreground hover:bg-foreground hover:text-background focus-visible:border-foreground focus-visible:bg-foreground focus-visible:text-background focus-visible:outline-none"
+              className="inline-flex items-center gap-2.5 border-2 border-foreground/70 px-3 py-2 text-sm uppercase tracking-[0.18em] text-foreground/80 transition-colors hover:border-foreground hover:bg-foreground hover:text-background focus-visible:border-foreground focus-visible:bg-foreground focus-visible:text-background focus-visible:outline-none"
               href={href}
             >
               <svg
@@ -170,6 +170,7 @@ function ProductCard({
                 <path d={siBigcartel.path} />
               </svg>
               {label}
+              <ExternalLink aria-hidden="true" className="size-4" />
             </a>
           ))}
         </div>
