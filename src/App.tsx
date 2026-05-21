@@ -276,7 +276,7 @@ export function App() {
         </header>
 
         <main className="mx-auto flex w-full max-w-7xl flex-1 flex-col px-4 py-4 sm:px-6 sm:py-6">
-          <section className="border-b border-border/80 px-5 pb-16 pt-6 sm:px-8 sm:pb-20 sm:pt-8">
+          <section className="border-b border-border/80 px-5 pb-10 pt-6 sm:px-8 sm:pb-14 sm:pt-8">
             <div
               className="scroll-mt-28 grid gap-x-16 gap-y-20 lg:grid-cols-2 xl:gap-x-18"
               id="products"
@@ -287,7 +287,7 @@ export function App() {
             </div>
           </section>
 
-          <section className="px-5 py-12 sm:px-8">
+          <section className="px-5 py-12 sm:px-8 sm:pb-12 sm:pt-16">
             <div
               className="grid gap-x-16 gap-y-12 lg:grid-cols-2 xl:gap-x-18"
               id="about"
