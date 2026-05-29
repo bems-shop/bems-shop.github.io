@@ -1,4 +1,4 @@
-import { ArrowUpRight, ExternalLink, Mail, X } from "lucide-react";
+import { ExternalLink, Mail, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { siBigcartel } from "simple-icons";
 
@@ -297,13 +297,10 @@ export function App() {
                 <p className="text-xs uppercase tracking-[0.32em] text-muted-foreground">
                   About
                 </p>
-                <h2 className="mt-4 text-2xl tracking-[-0.05em] sm:text-3xl">
-                  Placeholder introduction.
-                </h2>
                 <p className="mt-5 max-w-2xl text-sm leading-7 text-muted-foreground">
-                  Use this block for the short version of the story, design
-                  philosophy, manufacturing notes, or the point of difference.
-                  It is intentionally plain so product content remains dominant.
+                  Bristol Electronic Music Systems is a small, UK based company
+                  designing and manufacturing creative audio equipment for
+                  musicians, producers, and experimental sound makers.
                 </p>
               </div>
 
@@ -314,21 +311,19 @@ export function App() {
                 <div className="mt-4 flex flex-col gap-4 text-sm text-muted-foreground">
                   <a
                     className="inline-flex items-center gap-3 text-foreground transition-colors hover:text-muted-foreground"
-                    href="mailto:hello@example.com"
+                    href="mailto:bems.synth@gmail.com"
                   >
                     <Mail className="size-4" />
-                    hello@example.com
+                    bems.synth@gmail.com
                   </a>
-                  <p>
-                    Placeholder for direct contact details, support channel,
-                    lead times, or dealer enquiries.
-                  </p>
                   <a
-                    className="inline-flex items-center gap-2 uppercase tracking-[0.22em] text-foreground/80 transition-colors hover:text-foreground"
-                    href="#products"
+                    className="inline-flex items-center gap-3 text-foreground transition-colors hover:text-muted-foreground"
+                    href={socialLinks[0].href}
+                    rel="noreferrer"
+                    target="_blank"
                   >
-                    Review products
-                    <ArrowUpRight className="size-4" />
+                    <InstagramIcon className="size-4" />
+                    {socialLinks[0].label}
                   </a>
                 </div>
               </div>

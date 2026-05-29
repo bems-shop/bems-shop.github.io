@@ -32,7 +32,9 @@ export const catalogueProducts = [
       { label: "+12V", value: "25mA" },
       { label: "-12V", value: "25mA" },
     ],
-    availability: [{ label: "Big Cartel", href: "#" }],
+    availability: [
+      { label: "Big Cartel", href: "https://bems.bigcartel.com/product/tresh" },
+    ],
     image: {
       src: "/images/tresh.png",
       alt: "B.E.M.S TreSH Eurorack module mounted against weathered wood.",
